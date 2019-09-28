@@ -4,7 +4,7 @@
  "publisher": "local",
  "displayName": "template-pack",
  "description": "",
- "version": "0.0.1",
+ "version": "1.0.0",
  "engines": {
   "vscode": "^1.38.0"
  },
@@ -13,7 +13,7 @@
  },
  "scripts": {
   "vsc-pack": "node bin/readme.js && npx vsce package",
-  "install-all": "yarn vsc-pack && node ./bin/install.js"
+  "vsc-install": "yarn vsc-pack && node ./bin/install.js"
  },
  "categories": [
   "Extension Packs"
