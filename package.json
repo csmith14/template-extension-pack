@@ -13,13 +13,13 @@
  },
  "scripts": {
   "vsc-pack": "node bin/readme.js && npx vsce package",
-  "vsc-install": "yarn vsc-pack && node ./bin/install.js"
+  "install-all": "yarn vsc-pack && node ./bin/install.js"
  },
  "categories": [
   "Extension Packs"
  ],
  "config": {
-  "vscode": "code-insiders",
+  "vscode": ["code-insiders"],
   "commitizen" : {
 	  "path" : "node_modules/cz-conventional-changelog"
   }
