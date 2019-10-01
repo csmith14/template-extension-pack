@@ -1,36 +1,39 @@
 {
- "name": "template-pack",
- "private": true,
- "publisher": "local",
- "displayName": "template-pack",
- "description": "",
- "version": "1.0.0",
- "engines": {
-  "vscode": "^1.38.0"
- },
- "repository": {
-  "url": "https://github.com/csmith14/template-extension-pack"
- },
- "scripts": {
-  "vsc-pack": "node bin/readme.js && npx vsce package",
-  "vsc-install": "yarn vsc-pack && node ./bin/install.js"
- },
- "categories": [
-  "Extension Packs"
- ],
- "config": {
-  "vscode": ["code-insiders"],
-  "commitizen" : {
-	  "path" : "node_modules/cz-conventional-changelog"
+  "name": "template-pack",
+  "private": true,
+  "publisher": "local",
+  "displayName": "template-pack",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "repository": {
+    "url": "https://github.com/csmith14/template-extension-pack"
+  },
+  "scripts": {
+    "vsc-pack": "node bin/readme.js && npx vsce package",
+    "vsc-install": "yarn vsc-pack && node ./bin/install.js"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "config": {
+    "vscode": [
+      "code-insiders",
+      "code"
+    ],
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "extensionPack": [],
+  "dependencies": {
+    "execa": "^2.0.4",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2"
   }
- },
- "extensionPack": [],
- "dependencies": {
-  "execa": "^2.0.4",
-  "fs-extra": "^8.1.0"
- },
- "devDependencies": {
-  "commitizen": "^4.0.3",
-  "cz-conventional-changelog": "^3.0.2"
- }
 }
