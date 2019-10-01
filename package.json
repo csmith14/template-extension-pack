@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "name"       : "template-pack",
   "displayName": "Template Pack",
   "publisher"  : "local",
@@ -21,3 +22,43 @@
     "fs-extra" : "^8.1.0"
   }
 }
+=======
+  "name": "template-pack",
+  "private": true,
+  "publisher": "local",
+  "displayName": "template-pack",
+  "description": "",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.38.0"
+  },
+  "repository": {
+    "url": "https://github.com/csmith14/template-extension-pack"
+  },
+  "scripts": {
+    "vsc-pack": "node bin/readme.js && npx vsce package",
+    "vsc-install": "yarn vsc-pack && node ./bin/install.js"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "config": {
+    "vscode": [
+      "code-insiders",
+      "code"
+    ],
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "extensionPack": [],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "execa": "^2.0.4",
+    "fs-extra": "^8.1.0",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.2"
+  }
+}
+>>>>>>> 541b584b888819279e6ea868c5ab1773002b0063
