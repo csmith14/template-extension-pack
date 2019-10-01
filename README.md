@@ -1,3 +1,4 @@
+[file:981DDF4D-DC49-473D-AAB6-D21E5E5B39A0-5310-000003EC627EB22E/README.md]
 # Template Extension-Pack Repository
 
 This is a template repository.
@@ -6,7 +7,9 @@ This repo is used by [`create-local-ext-pack`](https://yarnpkg.com/en/package/cr
 
 ## Package.json Fields
 
-The package.json file is read by [`vsce`](https://yarnpkg.com/en/package/vsce) as the extension's 'manifest file'. 
+The package.json file is read by [`vsce`](https://yarnpkg.com/en/package/vsce) as the extension's 'manifest file'. Information here addresses this manifest in terms of interaction with the setup and install scripts. 
+
+	*For further information: [Extension Manifest Documentation](https://code.visualstudio.com/api/references/extension-manifest)*
 
 ### displayName
 
@@ -30,5 +33,5 @@ This array contains exactly one or both of `code` and/or `code-insiders`, as the
 
 **When invoking `./bin/install.js`, the script will install the `.vsix` to each executable in the array.**
 
-*For further information: https://code.visualstudio.com/api/references/extension-manifest*
+
 
