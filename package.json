@@ -1,19 +1,19 @@
 {
   "name"       : "template-pack",
   "displayName": "Template Pack",
-  "private"    : true,
   "publisher"  : "local",
   "description": "Template VS Code Extension Pack",
   "version"    : "1.0.0",
+  "private"    : true,
   "engines"    : {"vscode": "^1.38.0"},
   "repository" : {"url": "https://github.com/csmith14/template-extension-pack"},
   "scripts"    : {
-    "ver"        : "node bin/readme.js && rm *.vsix & yarn bump file patch",
-    "vsc-pack"   : "yarn ver && npx vsce package",
-    "vsc-install": "yarn vsc-pack && node ./bin/install.js"
+    "up"        : "node bin/readme.js && rm *.vsix & yarn bump package.json patch",
+    "vpack"   : "yarn up && npx vsce package",
+    "vinstall": "yarn vsc-pack && node ./bin/install.js"
   },
   "categories"     : ["Extension Packs"],
-  "config"         : {"vscode": ["code-insiders"]},
+  "config"         : {"vscode": ["code", "code-insiders"]},
   "extensionPack"  : [],
   "devDependencies": {
     "bump-file": "^2.0.0",
