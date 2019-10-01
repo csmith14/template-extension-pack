@@ -29,10 +29,10 @@
   },
   "extensionPack": [],
   "dependencies": {
-    "execa": "^2.0.4",
-    "fs-extra": "^8.1.0"
   },
   "devDependencies": {
+    "execa": "^2.0.4",
+    "fs-extra": "^8.1.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2"
   }

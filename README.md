@@ -2,4 +2,33 @@
 
 This is a template repository.
 
-This repo is cloned and modified by [https://yarnpkg.com/en/package/create-local-ext-pack](`create-local-ext-pack`) in order to expedite the creation of local-use extension packs.
+This repo is used by [`create-local-ext-pack`](https://yarnpkg.com/en/package/create-local-ext-pack) to scaffold new local-use extension packs.
+
+## Package.json Fields
+
+The package.json file is read by [`vsce`](https://yarnpkg.com/en/package/vsce) as the extension's 'manifest file'. 
+
+### displayName
+
+As implied, this is the value displayed as the extension's title in the sidebar and web interfaces. 
+
+### Engines
+
+The engine `vscode` must be specified.
+
+### extensionPack
+
+In the case of an extension pack, the only content-declaring field is `extensionPack`, which must be assigned an array of ID strings corresponding to the pack's constituents. 
+
+### dependencies, devDependencies
+
+When `vsce` packages the extension as a `.vsix` file, any properties declared on the `dependencies` object are interpreted as *dependencies of the extension*, which is most likely not desired. Any packages added during extension configuration should be added with `--dev`. 
+
+### config.vscode
+
+This array contains exactly one or both of `code` and/or `code-insiders`, as these are the two exectubales installed by the respective vscode versions. During setup with the `create-*` script, the value is assigned to either the sole value found within the environment, or in the case both are present, the value(s) chosen by the user. 
+
+**When invoking `./bin/install.js`, the script will install the `.vsix` to each executable in the array.**
+
+*For further information: https://code.visualstudio.com/api/references/extension-manifest*
+
